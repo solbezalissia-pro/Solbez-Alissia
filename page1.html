@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Me découvrire</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+	<header id="header" class="hero-header2"
+        style="background-image: url('images/monfond2.jpg');">
+    <div class="hero-content2">
+        <h1 class="hero-title2">À savoir sur moi</h1>
+        <ul class="actions">
+            <li><a href="index.html" class="button hero-button">Retour</a></li>
+        </ul>
+    </div>
+</header>
+
+
+<!-- Main -->
+<div id="main">
+
+<!-- Content -->
+<section id="content" class="main">
+
+    <!-- Études -->
+    <h2 class="title-icon-right">
+        Mes études
+        <img src="images/iut.png" alt="Logo IUT" class="tiny-logo">
+    </h2>
+
+    <p>Je suis actuellement étudiante en deuxième année de BUT Techniques de Commercialisation à l’IUT de Montpellier, une formation qui me permet d’acquérir des compétences solides en marketing, en négociation commerciale, en communication et en gestion de projet. Au fil de mes études, j’ai l’opportunité de travailler sur des projets concrets et professionnalisants, ce qui me permet de renforcer mes connaissances théoriques tout en développant une réelle expérience de terrain.</p>
+    <p>Je suis passionnée par le marketing digital, un domaine qui allie créativité et stratégie. Plus particulièrement, je m'intéresse à la conception de packagings, à la création de supports visuels et à la production de contenus pour les réseaux sociaux. Mon objectif professionnel est de travailler dans le marketing numérique, notamment dans la communication en ligne, la gestion des réseaux sociaux ou la stratégie de marque.</p>
+
+    <!-- Vie professionnelle -->
+    <h2 class="title-icon-right">
+        Ma vie professionnelle
+    </h2>
+
+    <p>En parallèle de mes études, je travaille en CDI chez Apple Odysseum, où j’occupe un poste de 8 heures chaque samedi. Cette expérience professionnelle m’offre l’opportunité de développer des compétences clés telles que la relation client, la communication et la gestion de situations variées. Elle me permet également de renforcer ma capacité d’adaptation, mon sens du service et ma réactivité au sein d’un environnement dynamique et exigeant.</p>
+
+    <!-- Projet professionnel -->
+
+ <h2 class="title-icon-right">
+Mes loisirs
+</h2>
+<p>En dehors de mes études et de mon travail, mes loisirs occupent une place importante dans mon quotidien et m’aident à garder un bon équilibre. La photographie est l’une de mes passions principales : j’aime capturer des moments, des ambiances et des détails qui racontent une histoire. Le badminton et le patin à glace me permettent de rester active, de me vider l’esprit et de me dépasser, tout en m’apportant discipline et persévérance. J’apprécie aussi des activités plus calmes et créatives, comme le soin des ongles, qui me permettent de me détendre tout en laissant parler mon sens esthétique. Enfin, la musique m’accompagne chaque jour et les concerts sont pour moi une véritable source d’énergie et d’inspiration. Ces loisirs reflètent une personnalité créative, dynamique et curieuse.</p>
+
+<!-- Galerie photo défilante personnalisée -->
+<div class="wrap-card1">
+  <div style="display:flex;align-items:center">
+    <div class="controls-card1" style="margin-left:auto">
+    </div>
+  </div>
+
+  <div class="gallery-card1" id="gallery-card1" tabindex="0">
+     <figure class="card1"><img src="images/bad.jpg"><figcaption class="caption-card1"><span class="label-card1">Badminton</span><span class="meta-card1"></span></figcaption></figure>
+    <figure class="card1"><img src="images/ongle1.jpg"><figcaption class="caption-card1"><span class="label-card1">Ongles</span><span class="meta-card1"></span></figcaption></figure>
+  </div>
+</div>
+
+<script>
+  const galleryCard1 = document.getElementById('gallery-card1');
+  const prevCard1 = document.getElementById('prev-card1');
+  const nextCard1 = document.getElementById('next-card1');
+  const playCard1 = document.getElementById('play-card1');
+
+  let autoCard1 = false;
+  let autoIdCard1 = null;
+  const stepCard1 = 340;
+
+  function scrollToNextCard1(){ galleryCard1.scrollBy({left: stepCard1, behavior: 'smooth'}); }
+  function scrollToPrevCard1(){ galleryCard1.scrollBy({left: -stepCard1, behavior: 'smooth'}); }
+
+  prevCard1.addEventListener('click', scrollToPrevCard1);
+  nextCard1.addEventListener('click', scrollToNextCard1);
+
+  function startAutoCard1(){
+    if(autoIdCard1) return;
+    autoCard1 = true;
+    playCard1.textContent = '❚❚';
+    autoIdCard1 = setInterval(()=>{
+      if(galleryCard1.scrollLeft + galleryCard1.clientWidth >= galleryCard1.scrollWidth - 10){
+        galleryCard1.scrollTo({left:0, behavior:'smooth'});
+      } else {
+        galleryCard1.scrollBy({left: stepCard1, behavior:'smooth'});
+      }
+    }, 2400);
+  }
+
+  function stopAutoCard1(){
+    autoCard1 = false;
+    playCard1.textContent = '►';
+    clearInterval(autoIdCard1);
+    autoIdCard1 = null;
+  }
+
+  playCard1.addEventListener('click', ()=>{ autoCard1 ? stopAutoCard1() : startAutoCard1(); });
+</script>
+
+
+ <h2 class="title-icon-right">
+ Mes Intérêts académiques
+</h2>
+<p>Dans mon parcours en BUT Techniques de Commercialisation, certaines matières m’ont particulièrement marquée, car elles mêlent réflexion, analyse et créativité, un équilibre qui correspond parfaitement à ma manière de travailler. Les mathématiques et l’informatique sont des domaines dans lesquels je me sens à l’aise : ils m’aident à structurer ma réflexion, à analyser des données et à résoudre des problèmes de façon logique, des compétences essentielles en marketing digital.</p>
+<p>À côté de cet aspect plus analytique, je prends beaucoup de plaisir dans les matières créatives comme l’audiovisuel, le marketing digital, l’innovation ou la création d’entreprise. Ces cours me permettent d’exprimer ma créativité, d’imaginer des concepts et de travailler sur des projets concrets. J’apprécie particulièrement les moments de brainstorming, de conception visuelle et de réflexion stratégique, où une idée prend progressivement forme pour devenir un projet abouti.</p>
+</section>
+
+</div>
+
+<!-- Footer -->
+
+<footer id="footer">
+  <section>
+    <h2>À propos de moi</h2>
+    <p>Jeune professionnelle dynamique et motivée, je suis toujours à la recherche de nouvelles expériences pour développer mes compétences et relever de nouveaux défis.</p>
+
+      <ul class="icons">
+      <li><a href="https://www.linkedin.com/in/alissia-solbez-2a5771382/" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+    </ul>
+
+  </section>
+
+  <section>
+    <h2>Mes coordonnées</h2>
+    <dl class="alt">
+
+    <dt>Naissance</dt>
+      <dd>18 août 2006</dd>
+
+      <dt>Adresse</dt>
+      <dd>21 rue Michel Henry<br>34090 Montpellier</dd>
+
+      <dt>Téléphone</dt>
+      <dd>07 68 86 78 62</dd>
+
+      <dt>Email</dt>
+      <dd><a href="mailto:Solbezrigaudalissia@gmail.com">Solbezrigaudalissia@gmail.com</a></dd>
+
+      <dt>Permis</dt>
+      <dd>Permis AM & Permis B</dd>
+    </dl>
+
+  </section>
+
+  <p class="copyright">
+    &copy; 2025 Alissia Solbez Rigaud. Design basé sur un modèle de <a href="https://html5up.net" target="_blank">HTML5 UP</a>.
+  </p>
+</footer>
+			</div>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
